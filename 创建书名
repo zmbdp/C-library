@@ -1,0 +1,20 @@
+#pragma warning(disable:4996)
+#include<stdio.h>
+#include<string.h>      //struct的头文件
+struct Book
+{
+	char shuming[20];
+	short jiage;
+};
+int main()
+{
+	struct Book b2 = { "########",39 };
+	printf("书名: % s\n", b2.shuming);
+	printf("价格=%d元\n", b2.jiage);
+	b2.jiage = 99;
+	strcpy(b2.shuming, "*********");
+	printf("更改如下: \n");
+	printf("书名：美少女万华镜\n");
+	printf("清仓大甩卖，不要9999，不要999，只要%d啊，贱卖!贱卖!\n", b2.jiage);
+	return 0;
+}
