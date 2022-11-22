@@ -1,0 +1,13 @@
+#pragma warning(disable:4996)
+#include<stdio.h>
+int main()
+{
+	int  某某某;                                 //某某某可自行定义
+	printf("注：此程序按”Ctrl+z“可退出\n");
+	printf("请输入某某某的值：");
+	while (( 某某某= getchar())!=EOF)           //getchar可当scanf
+	{
+		printf("%c", 某某某);
+	}
+	return 0;
+}
