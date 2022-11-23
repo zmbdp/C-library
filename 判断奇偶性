@@ -6,11 +6,14 @@ int n;
 int a;
 printf("请输入a:");
 scanf("%d", &a);
-for (n = 1;n <= a;n++){
-	if (n % 2 == 1) {
+for (n = 1;n <= a;n++)
+{
+	if (n % 2 == 1) 
+	{
 		printf("%d—为坤数\n",n);
 	}
-	if (n % 2 == 0) {
+	if (n % 2 == 0) 
+	{
 		printf("%d—为偶数\n",n);
 	}
 }
