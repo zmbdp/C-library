@@ -1,0 +1,18 @@
+#pragma warning(disable:4996)
+#include<stdio.h>
+int main()
+{
+	int n = 0;
+	int m = 0;
+	int q = 0;
+	printf("请输入需要求最大公约数的两组数字：");
+	scanf("%d%d", &n, &m);
+	while (m%n!=0)
+	{
+		q = m % n;
+		m = n;
+		n = q;
+	}
+	printf("这两组数的最大公约数为%d\n", n);
+	return 0;
+}
