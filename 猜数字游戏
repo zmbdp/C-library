@@ -1,0 +1,60 @@
+#include<time.h>              //time的头文件
+#pragma warning(disable:4996)
+#include<stdlib.h>            //rand,RAND_MAX
+#include<stdio.h>
+void menu()                   //menu的菜单
+{
+	printf("***************************************\n");
+	printf("****       1.play      0.exit      ****\n");
+	printf("***************************************\n");
+}
+void game()                   //实现game的一个函数
+{
+	int m = 0;
+	printf("欢迎体验猜数字游戏\n");
+	int q = 0;
+	m = rand()%100+1;            //专门生成一个0~7fff的一个随机数的一个函数，7fff=32767，因为模上一百就只生成一个1~100之间的数
+	while (1)
+	{
+		printf("\n请输入你心中所想的数字：");
+		scanf("%d", &q);
+			if (q > m)
+			{
+				printf("猜大了\n");
+			}
+			else if (q < m)
+			{
+				printf("猜小了\n");
+			}
+			else
+			{
+				printf("恭喜你，猜对了\n");
+				break;
+			}
+
+	}
+}
+int main()
+{
+	srand((unsigned int)time(NULL));//拿时间戳设置随机数的起点,整个代码里设置一次就行了，所以放主函数的main里面
+	int n = 0;
+	do
+	{
+	 	menu();
+		printf("\n请选择:");
+		scanf("%d", &n);
+		switch (n)
+		{
+		case 1:
+			game();
+			break;
+		case 0:
+			printf("退出游戏\n");
+			break;
+		default://相当于if语句中的最后的else，前面全是假就执行
+			printf("选择错误\n");
+			break;
+		}
+	} while (n!=0);
+	return 0;
+}
