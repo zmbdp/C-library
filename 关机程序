@@ -1,0 +1,42 @@
+#pragma warning(disable:4996)
+#include<stdio.h>
+#include<string.h>//strcmp的头文件
+#include<stdlib.h>//system的头文件
+int main()
+{
+	char m[200] = {0};
+	system("shutdowm-s-t 60");//shutdowm-s-t：电脑关机指令
+h:
+	printf("\n请注意!!!请注意!!!您的电脑将在60秒之后关机，如果输入我是猪则取消关机\n请输入：");
+	scanf("%s",m );
+	if (strcmp(m, "我是猪") == 0)
+	{
+		system("shutdowm - a");//shutdowm - a：电脑开机指令
+	}
+	else
+	{
+		goto h;
+	}
+	return 0;
+}
+//另一种方案：while循环
+//#pragma warning(disable:4996)
+//#include<stdio.h>
+//#include<string.h>//strcmp的头文件
+//#include<stdlib.h>//system的头文件
+//int main()
+//{
+//	char m[200] = { 0 };
+//	system("shutdowm -s -t 60");
+//	while (1)
+//	{
+//		printf("请注意!!!请注意!!!您的电脑将在600秒之后关机，如果输入我是猪则取消关机\n请输入：");
+//		scanf("%s", m);
+//		if (strcmp(m, "我是猪") == 0)
+//		{
+//			system("shutdowm - a");
+//			break;
+//		}
+//	}
+//	return 0;
+//}
