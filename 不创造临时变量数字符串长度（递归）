@@ -1,0 +1,16 @@
+int suanzi(char* n)
+{
+	if (*n != '\0')
+	{
+		return 1 + suanzi(n + 1);
+	}
+	else
+		return 0;
+}
+int main()
+{
+	char arr[] = "YangFei";
+	int chang = suanzi(arr);
+	printf("chang=%d\n", chang);
+	return 0;
+}
