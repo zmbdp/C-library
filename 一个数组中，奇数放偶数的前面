@@ -1,0 +1,38 @@
+void panduan(int* arr, int sz)
+{
+	int i = 0;
+	int k = 0;//最后那个
+	int brr[99999] = { 0 };
+	int crr[99999] = { 0 };
+	for (i = 0; i < sz; i++)
+	{
+		crr[i] = *(arr++);
+	}
+	//先判断奇数
+	for (i = 0; i < sz; i++)
+	{
+		if (crr[i] % 2 == 1)//判断奇数
+		{
+			brr[k] = crr[i];
+			printf("%d ", brr[k]);
+			k++;
+		}
+	}
+	//再判断偶数
+	for (i = 0; i < sz; i++)
+	{
+		if (crr[i] % 2 == 0)
+		{
+			brr[k] = crr[i];
+			printf("%d ", brr[k]);
+			k++;
+		}
+	}
+}
+int main()
+{
+	int arr[] = { 1,3,2,18,98,6,39,10,31,99,27 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	panduan(arr, sz);
+	return 0;
+}
