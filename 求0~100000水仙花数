@@ -1,0 +1,40 @@
+int jisuan(int n)
+{
+	int w = 0;
+	if (n == 0)
+	{
+		w++;
+	}
+	while (n >= 1)
+	{
+		n = n / 10;
+		w++;
+	}
+	return w;
+}
+int main()
+{
+	int w = 0;//计算几位数
+	int i = 0;
+	int q = 0;
+	int z = 0;
+	int c = 0;
+	int f = 0;
+	for (i = 0; i <= 100000; i++)
+	{
+		w = jisuan(i);//自定义函数求i是几位数
+		f = i;//f顶替i进行计算，因为i要++
+		c = 0;//因为每次计算c都要从0开始算
+		for (q = 0; q < w; q++)//计算每一位的w次方之和 
+		{
+			z = f % 10;//提取出每一位数字
+			f = f / 10;
+			c = c + pow(z, w);//pow是计算次方的，这里是计算z的w次方
+		}
+		if (i == c)
+		{
+			printf("%d ", i);
+		}
+	}
+	return 0;
+}
