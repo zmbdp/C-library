@@ -1,0 +1,40 @@
+int zuixiao(int a, int b)
+{
+	int c = 0;
+	int i = 0;
+	if (a >= b)
+	{
+		i = a;
+		while (i)
+		{
+			if ((i % a == 0) && (i % b == 0))
+			{
+				return i;
+			}
+			i++;
+		}
+	}
+	else
+	{
+		i = b;
+		while (i)
+		{
+			if ((i % a == 0) && (i % b == 0))
+			{
+				return i;
+			}
+			i++;
+		}
+	}
+}
+int main()
+{
+	int z = 0;
+	int A = 0;
+	int B = 0;
+	printf("请输入两个数字：");
+	scanf("%d %d", &A, &B);
+	z = zuixiao(A, B);
+	printf("%d 是%d和%d的最小公倍数\n", z, A, B);
+	return 0;
+}
