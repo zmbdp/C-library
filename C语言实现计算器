@@ -1,0 +1,60 @@
+//实现计算器
+void caidan()
+{
+	printf("****************************************\n");
+	printf("******    1.jiafa     2.jianfa    ******\n");
+	printf("******   3.chengfa     4.chufa    ******\n");
+	printf("******           0.exte           ******\n");
+	printf("****************************************\n");
+}
+
+//0:退出程序
+//1.加法计算
+//2.减法计算
+//3.乘法计算
+//4.除法计算
+
+int jia(int x, int y)
+{
+	return x + y;
+}
+int jian(int x, int y)
+{
+	return x - y;
+}
+int cheng(int x, int y)
+{
+	return x * y;
+}
+int chu(int x, int y)
+{
+	return x / y;
+}
+int main()
+{
+	int s = 0;
+	caidan();
+	do {
+		//jisuan[5]就是函数指针数组。
+		int(*jisuan[5])(int,int) = {NULL,jia,jian,cheng,chu};
+		printf("请输入你要选择的计算方式：");
+		scanf("%d", &s);
+		if (s > 5)
+		{
+			printf("输入错误，请重试：\n");
+			continue;
+		}
+		if (s == 0)
+		{
+			printf("退出成功!");
+			break;
+		}
+		int x = 0;
+		int y = 0;
+		printf("请输入两个需要计算的数：");
+		scanf("%d %d", &x, &y);
+		int z = (jisuan[s])(x, y);
+		printf("结果是：%d\n", z);
+	} while (s);
+	return 0;
+}
