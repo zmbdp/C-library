@@ -1,0 +1,18 @@
+void jiaohuan(int* pa, int* pb)
+{
+	(*pa) = (*pa) ^ (*pb);
+	(*pb) = (*pb) ^ (*pa);
+	(*pa) = (*pa) ^ (*pb);
+}
+int main()
+{
+	int a = 0;
+	int b = 0;
+	printf("请输入想交换的第一个数：a->");
+	scanf("%d", &a);
+	printf("请输入想交换的第二个数：b->");
+	scanf("%d", &b);
+	jiaohuan(&a, &b);//交换函数
+	printf("交换后：\na==%d\nb==%d",a,b);
+	return 0;
+}
