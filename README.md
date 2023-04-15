@@ -1,2 +1,0 @@
-# CAndC-
-cun ruCyuC++
