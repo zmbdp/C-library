@@ -1,0 +1,9 @@
+﻿  biao.c
+  lian.c
+C:\vs的文档\text_shuang_lian_biao_3_25\lian.c(35,42): warning C4047: “=”:“LX”与“void *”的间接级别不同
+C:\vs的文档\text_shuang_lian_biao_3_25\lian.c(35,42): warning C4047: “=”:“ListNode *”与“LX”的间接级别不同
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 11 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  text_shuang_lian_biao_3_25.vcxproj -> C:\vs的文档\text_shuang_lian_biao_3_25\x64\Release\text_shuang_lian_biao_3_25.exe

@@ -1,0 +1,6 @@
+﻿  biao.c
+  lian.c
+C:\vs的文档\text_shuang_lian_biao_3_25\lian.c(78,66): warning C4047: “=”:“LX”与“void *”的间接级别不同
+C:\vs的文档\text_shuang_lian_biao_3_25\lian.c(78,66): warning C4047: “=”:“ListNode *”与“LX”的间接级别不同
+  正在生成代码...
+  text_shuang_lian_biao_3_25.vcxproj -> C:\vs的文档\text_shuang_lian_biao_3_25\x64\Debug\text_shuang_lian_biao_3_25.exe
