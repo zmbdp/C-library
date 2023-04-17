@@ -1,0 +1,4 @@
+﻿  lian.c
+C:\vs的文档\test_dan_lian_biao_3_19\lian.c(19,11): warning C4098: “SListInsert”:“void”函数返回值
+C:\vs的文档\test_dan_lian_biao_3_19\lian.c(133,4): warning C4133: “return”: 从“SLT *”到“SLTDateType *”的类型不兼容
+  test_dan_lian_biao_3_19.vcxproj -> C:\vs的文档\test_dan_lian_biao_3_19\x64\Debug\test_dan_lian_biao_3_19.exe
